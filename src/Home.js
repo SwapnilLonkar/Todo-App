@@ -1,7 +1,8 @@
 import './App.css';
-  import React from 'react';
 import axios from 'axios';
 import { useState } from 'react';
+import { useHistory } from "react-router-dom";
+
 
   
   function App() {
@@ -10,6 +11,7 @@ import { useState } from 'react';
     const [userData, setuserData] =  useState({})
     const [isloggedIn, setisloggedIn] = useState(false)
     const [loginError, setLoginError] = useState(false)
+    let history = useHistory();
     
 
     const [values, setValues] = useState({
@@ -49,7 +51,12 @@ import { useState } from 'react';
             if (response.data) {
               setuserData(response.data);
               logUserIn();
-            }})
+          }})
+
+            if (isloggedIn) {
+              console.log(isloggedIn);
+              history.push("/list");
+            }
         
 
       }
@@ -67,22 +74,22 @@ import { useState } from 'react';
       
       <div className="Container">
         <div className="form">
-        <form onSubmit={onSubmit}>
+        <form onSubmit={onSubmit} >
           <h1>Rapptr Labs</h1>
           <div className="inputblock">
             <div className="label">
           <label htmlFor="Email">Email</label>
           </div>
-          <input className="input" value={values.email} onChange={handleEmail} type="text" id="Email" placeholder="user@rapptrlabs.com "></input>
+          <input className="input" value={values.email} onChange={handleEmail} type="email" id="Email" placeholder="user@rapptrlabs.com "></input>
           </div>
           <div className="inputblock">
             <div className="label">
           <label htmlFor="Password">Password</label>
           </div>
-          <input className="input" value={values.password} onChange={handlePassword} type="text" id="Password" placeholder="Must be at least 4 characters"></input>
+          <input className="input" value={values.password} onChange={handlePassword} type="password" id="Password" placeholder="Must be at least 4 characters"></input>
           </div>
           <div>
-          <button className="button">Submit</button>
+          <button className="button" >Submit</button>
           </div>
         </form>
         </div>
