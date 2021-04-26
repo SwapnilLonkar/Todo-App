@@ -7,6 +7,11 @@ import { useState } from 'react';
   function App() {
 
 
+    const [userData, setuserData] =  useState({})
+    const [isloggedIn, setisloggedIn] = useState(false)
+    const [loginError, setLoginError] = useState(false)
+    
+
     const [values, setValues] = useState({
       email: "",
       password: ""
@@ -40,10 +45,21 @@ import { useState } from 'react';
           },
           data: formData,
         })
-        .then(response =>{
-          console.log(response);
-        }).catch(err =>{console.log(err)});
+        .then(response => {
+            if (response.data) {
+              setuserData(response.data);
+              logUserIn();
+            }})
+        
 
+      }
+
+      const logUserIn = () => {
+        setTimeout(() => {
+          setisloggedIn(true)
+          if (loginError) setLoginError(false)
+        }, 450)
+        console.log(userData);
       }
 
 
@@ -79,4 +95,3 @@ import { useState } from 'react';
   }
   
   export default App;
-  
