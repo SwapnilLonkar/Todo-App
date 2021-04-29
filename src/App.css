@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color:rgb(211, 205, 205);
+  background-color:#2b2d42;
 }
 
 .form
@@ -13,7 +13,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  background-color:grey;
+  background-color:#8d99ae;
   padding: 10%;
 }
 
@@ -24,9 +24,10 @@
 .input
 {
 padding: 10px;
-border-width: 1px;
-border-radius: 4px;
+border: none;
 background-color: rgb(185, 169, 169);
+border-color: transparent;
+outline: none;
 }
 
 .label
@@ -40,7 +41,7 @@ background-color: rgb(185, 169, 169);
   width: 90%;
   padding: 10px;
   border-radius: 4px;
-  background-color: lightslategray;
+  background-color: #3e5692;
 }
 
 .listcontainer
@@ -48,38 +49,52 @@ background-color: rgb(185, 169, 169);
   text-align: center;
   display: flex;
   flex-direction: column;
-  background-color:grey;
+  background-color:#8d99ae;
   min-width: 35%;
   min-height:40vh;
 }
 
 .listtoolbar
 {
-  background-color: grey;
-  padding: 5%;
+  background-color: #8d99ae;
+  padding: 2%;
 }
 
 .search
 {
-  background-color: rgb(243, 236, 236);
+  background-color: #a3b4d1;
   float: left;
-  margin-left: 10%;
+  margin-left: 5%;
+  padding: 1%;
+  border-style: solid;
+  border-radius: 5px;
 }
 
 .new
 {
-  background-color: rgb(190, 124, 122);
-  justify-content: right;
+  background-color: #6778a5;
   float: right;
-  margin-right: 10%;
+  margin-right: 5%;
+  border-radius: 5px;
+  padding: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
+  border-style: solid;
 
+}
+
+
+.listcomponentContainer
+{
+  justify-content: center;
+  padding: 30px;
 }
 
 .listcomponent
 {
-  width: 100%;
-  background-color: rgb(140, 165, 165);
-  padding-top: 10px;
+  width: auto;
+  background-color: #8d99ae;
+  margin: 10px;
   padding-bottom: 10px;
   border-color: black;
   border-width: 2px;
@@ -97,6 +112,58 @@ background-color: rgb(185, 169, 169);
 {
   align-self: flex-end;
   padding: 5px;
-  margin: 5px;
-  background-color: burlywood;
+  margin: 10px;
+  background-color: #6778a5;
+  border-radius: 5px;
+  border-style: solid;
+}
+
+
+.invalidText
+{
+  font-size: small;
+  color: red;
+}
+
+.iconContainer
+{
+  width: fit-content;
+  background-color: rgb(185, 169, 169);
+  border-style: solid;
+  border-width: 2px;
+  border-color:black;
+  border-radius: 3px;
+}
+.icon{
+  padding: 5px;
+}
+.listicon
+{
+  float: right;
+}
+
+.listbutton
+{
+  float:right;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  justify-content: end;
+
+}
+
+.edittext
+{
+  background-color: #8d99ae;
+  padding: 10px;
+  border: none;
+  border-color: transparent;
+  outline: none;  
+
+}
+
+.listbuttonContainer
+{
+  float: right;
+  padding: 10px;
 }
