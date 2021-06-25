@@ -1,4 +1,3 @@
-import './App.css';
 import { FaEdit } from "react-icons/fa";
 import { FaTrash } from "react-icons/fa";
 import React from 'react';
@@ -46,9 +45,10 @@ function List() {
         setinputText({...inputText,inputText: e.target.value })
 
     }
-    const savehandler = () =>
+    const savehandler = (e) =>
     {
         localStorage.setItem('userData', JSON.stringify(todo));
+        
     }
     const handleLogout = () =>{
         localStorage.setItem('userData', JSON.stringify(todo));
@@ -77,8 +77,8 @@ function List() {
 
            {newState ? <div className="listtoolbar" >
             <form onSubmit={submitHandler}>
-            <input className="search" value={inputText.inputText} onChange={handleInputText} placeholder="Add to-do"></input> 
-            <button className="new" onClick={savehandler}>Save</button>
+            <input className='add'  onChange={handleInputText} placeholder="Add to-do"></input> 
+            <button className="save" onClick={savehandler}>Save</button>
             </form>
              </div> : null}
             <div className="listcomponentContainer" >

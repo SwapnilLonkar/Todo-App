@@ -119,6 +119,30 @@ outline: none;
 }
 
 
+.add
+{
+  background-color: #a3b4d1;
+  float: left;
+  margin-left: 5%;
+  padding: 1%;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+.save
+{
+  background-color: #6778a5;
+  float: right;
+  margin-right: 5%;
+  border-radius: 5px;
+  padding: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
+  border-style: solid;
+
+}
+
+
 .invalidText
 {
   font-size: small;

@@ -4,8 +4,8 @@ import {
   Route,
 } from "react-router-dom";
 import './App.css';
-import List from "./List";
-import Home from "./Home";
+import List from "./Components/List";
+import Home from "./Components/Home";
 import React from 'react';
 
 function App() {
